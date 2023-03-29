@@ -2,6 +2,8 @@ body {
     font-size: 1rem;
     color: rgb(43, 43, 43);
     visibility: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 header {
@@ -11,6 +13,10 @@ header {
     margin: auto;
     background-color: antiquewhite;
     height: 50px;
+}
+
+h1{
+    font-size: 1.5rem;
 }
 
 .header-container {
@@ -42,9 +48,7 @@ header {
 li {
 visibility: hidden;
 background-color: beige;
-width: 200px;
 list-style: none;
-padding: 5px;
 text-align: center;
 position: relative;
 
@@ -54,6 +58,7 @@ position: relative;
     display: flex;
     overflow: scroll;
     width: 80%;
+    height: 40%;
     margin: 0 auto;
 }
 
@@ -64,6 +69,7 @@ position: relative;
     border-radius: 5px;
     text-align: center;
     width: 100%;
+
 }
 
 .image-text {

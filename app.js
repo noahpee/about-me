@@ -8,15 +8,6 @@ function userPrompt() {
 
         let openingQuestion = prompt('oh hey didnt see you there, whats your name?');
 
-        if (openingQuestion.toLowerCase() === 'yes' || openingQuestion.toLowerCase() === 'y') {
-    
-            alert('yes');
-    
-        } else {
-    
-            alert('no');
-        }
-
         let firstAnswer = prompt('wait ' + openingQuestion + ' are you sure you want to enter?');
 
         if (firstAnswer.toLowerCase() === 'yes' || firstAnswer.toLowerCase() === 'y') {
@@ -25,10 +16,12 @@ function userPrompt() {
     
         } else {
     
-            alert('ok maybe not');
+            alert('ok im just gonna show you anyway');
         }
 
         document.getElementById('welcome-message').innerText = 'welcome ' + openingQuestion + ' what is going on'
+
+        document.getElementById('body').style.visibility = 'visible'
 
         document.getElementById('body').style.visibility = 'visible'
 
@@ -50,6 +43,7 @@ function menuOpen() {
             list[i].style.visibility = "visible"
 
         }
+
 
         openUp += 1
 
