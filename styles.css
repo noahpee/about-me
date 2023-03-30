@@ -1,7 +1,7 @@
 body {
     font-size: 1rem;
     color: rgb(43, 43, 43);
-    visibility: hidden;
+    visibility: visible;
     width: 100vw;
     height: 100vh;
 }
@@ -45,13 +45,8 @@ h1{
     margin: 1% auto;
 }
 
-li {
-visibility: hidden;
-background-color: beige;
-list-style: none;
-text-align: center;
-position: relative;
-
+.menu {
+    position: absolute;
 }
 
 .image-container {
@@ -74,4 +69,10 @@ position: relative;
 
 .image-text {
     margin: 2%;
+}
+
+.list-homes {
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
 }

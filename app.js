@@ -2,6 +2,14 @@
 
 let openUp = 0
 
+let userScore = 0
+
+let userTrys = 4
+
+let bonusTrys = 6
+
+let numberGamez = false
+
 function userPrompt() {
 
     setTimeout(function() {
@@ -30,8 +38,6 @@ function userPrompt() {
     
 }
 
-userPrompt()
-
 function menuOpen() {
 
     if (openUp == 0) {
@@ -43,7 +49,6 @@ function menuOpen() {
             list[i].style.visibility = "visible"
 
         }
-
 
         openUp += 1
 
@@ -65,42 +70,165 @@ function menuOpen() {
 
 function quiz() {
 
-    let secondAnswer = prompt('do you really want to find out?');
+    let zzzzz = prompt('what is my name?');
 
-    if (secondAnswer.toLowerCase() === 'yes' || secondAnswer.toLowerCase() === 'y') {
+    if (zzzzz.toLowerCase() === 'noah') {
 
-        alert('1');
+        alert('correct');
 
-    } else {
-        
-        alert('2');
-    }
-
-    let thirdAnswer = prompt('do you really want to find out?');
-
-    if (thirdAnswer.toLowerCase() === 'yes' || thirdAnswer.toLowerCase() === 'y') {
-
-        alert('1');
+        userScore ++
 
     } else {
         
-        alert('2');
+        alert('wrong');
     }
 
-    let fourthAnswer = prompt('do you really want to find out?');
+    let secondAnswer = prompt('where was my the first country i visited?');
 
-    if (fourthAnswer.toLowerCase() === 'yes' || fourthAnswer.toLowerCase() === 'y') {
+    if (secondAnswer.toLowerCase() === 'italy') {
 
-        alert('1');
+        alert('correct');
+
+        userScore ++
 
     } else {
         
-        alert('2');
+        alert('wrong');
     }
-    setTimeout(function() {
 
-        alert('sorry i cant remember what it was now.. my bad')
+    let thirdAnswer = prompt('whats my favourite food');
+
+    if (thirdAnswer.toLowerCase() === 'pasta') {
+
+        alert('correct');
+
+        userScore ++
+
+
+    } else {
         
-        }, 1500)
+        alert('wrong');
+    }
+
+    let fourthAnswer = prompt('what food do i not like on pizza');
+
+    if (fourthAnswer.toLowerCase() === 'mushroom' || fourthAnswer.toLowerCase() === 'mushrooms') {
+
+        alert('correct');
+
+        userScore ++
+
+
+    } else {
         
+        alert('wrong');
+    }
+
+    let fiththAnswer = prompt('who was my favourite roman');
+
+
+    if (fiththAnswer.toLowerCase() === 'juluis caesar' || fiththAnswer.toLowerCase() === 'caesar') {
+
+        alert('correct');
+
+        userScore ++
+
+
+    } else {
+        
+        alert('wrong');
+    }
+
+    console.log(userScore)
+
+    numberGame()
+
+    userTrys = 4
+        
+}
+
+function numberGame(){
+
+    if (userTrys == 0) {
+
+        alert('no more trys remaining!')
+
+        console.log("your score is " + userScore + ' so far')
+
+        bonusRound()
+
+        return
+    }
+
+    let numberGuess = prompt('can you guess my favourite number? you have ' + userTrys + ' remaining');
+
+    console.log(numberGuess)
+
+    if (numberGuess > 15 || numberGuess == 15) {
+
+        alert('too high!');
+
+        userTrys --
+
+        numberGame()
+
+    } else if (numberGuess < 13 || numberGuess == 13) {
+        
+        alert('too low!');
+
+        userTrys --
+
+        numberGame()
+
+    } else if (numberGuess == 14) {
+
+        userScore ++
+
+        console.log("your score is " + userScore + ' so far')
+
+        alert('great number') 
+
+        bonusRound()
+
+    }
+
+
+
+}
+
+function bonusRound() {
+
+
+    if (bonusTrys == 0) {
+
+        alert("no more trys remaining! your final score is " + userScore + ' well done')
+
+        console.log()
+
+        return
+    }
+
+
+    let chelseaPlayers = ['zola', 'lampard', 'terry']
+
+    let finalAnswer = prompt('for a bonus point can you name any of my favourite chelsea players? you have ' + bonusTrys + ' remaining');
+
+    if (finalAnswer.toLowerCase() === chelseaPlayers[0] || finalAnswer.toLowerCase() === chelseaPlayers[1] || finalAnswer.toLowerCase() === chelseaPlayers[2]) {
+
+        alert('correct, your final score is ' + userScore);
+
+        userScore ++
+
+        bonusTrys == 6
+
+    } else {
+        
+        alert('wrong');
+
+        bonusTrys --
+
+        bonusRound()
+    }
+
+
 }
