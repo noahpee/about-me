@@ -8,7 +8,9 @@ let bonusTrys = 6
 
 let randomNumber = 0
 
-let quizAnswers = ['noah, italy, pasta, mushroom, caesar']
+let qNum = 5 
+
+let quizzies = [{Q:'what is my name?', A:'noah'}, {Q:'where was my the first country i visited?', A:'italy'}, {Q:'what is my favourite food?', A:'pasta'}, {Q:'what does not belong on pizza?', A:'mushroom'}, {Q:'who is my favourite roman', A:'juluis caesar'} ]
 
 function userPrompt() {
 
@@ -197,5 +199,32 @@ function bonusRound() {
 
         bonusRound()
     }
+
+}
+
+function newQuiz() {
+
+    userScore == 0
+
+    for(let i = 0; i < qNum; i++) {
+
+        let quizzQuiz = prompt(quizzies[i].Q);
+
+        if (quizzQuiz.toLowerCase() === quizzies[i].A) {
+    
+            alert('correct');
+    
+            userScore ++
+    
+        } else {
+            
+            alert('wrong');
+        }
+
+    }
+
+    alert('your final score is ' + userScore + ' out of 5');
+
+    numberGame()
 
 }
