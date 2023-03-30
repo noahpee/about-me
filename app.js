@@ -6,40 +6,7 @@ let userTrys = 4
 
 let bonusTrys = 6
 
-let randomNumber = 0
-
-let qNum = 5 
-
 let quizzies = [{Q:'what is my name?', A:'noah'}, {Q:'where was my the first country i visited?', A:'italy'}, {Q:'what is my favourite food?', A:'pasta'}, {Q:'what does not belong on pizza?', A:'mushroom'}, {Q:'who is my favourite roman', A:'juluis caesar'} ]
-
-function userPrompt() {
-
-    setTimeout(function() {
-
-        let openingQuestion = prompt('oh hey didnt see you there, whats your name?');
-
-        let firstAnswer = prompt('wait ' + openingQuestion + ' are you sure you want to enter?');
-
-        if (firstAnswer.toLowerCase() === 'yes' || firstAnswer.toLowerCase() === 'y') {
-    
-            alert('sure sure?');
-    
-        } else {
-    
-            alert('ok im just gonna show you anyway');
-        }
-
-        document.getElementById('welcome-message').innerText = 'welcome ' + openingQuestion + ' what is going on'
-
-        document.getElementById('body').style.visibility = 'visible'
-
-        document.getElementById('body').style.visibility = 'visible'
-
-    }, 2000);
-
-    
-}
-
 
 function quiz() {
 
@@ -117,8 +84,10 @@ function quiz() {
     userTrys = 4
         
 }
+let randomNumber = Math.floor((Math.random() * 10) + 1);
 
 function numberGame(){
+
 
     console.log(randomNumber)
 
@@ -206,7 +175,7 @@ function newQuiz() {
 
     userScore == 0
 
-    for(let i = 0; i < qNum; i++) {
+    for(let i = 0; i < quizzies.length; i++) {
 
         let quizzQuiz = prompt(quizzies[i].Q);
 

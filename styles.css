@@ -75,4 +75,5 @@ h1{
     display: flex;
     margin: 0 auto;
     width: 50%;
+    justify-content: center;
 }
