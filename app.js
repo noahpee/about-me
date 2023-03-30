@@ -1,14 +1,14 @@
 'use strict'
 
-let openUp = 0
-
 let userScore = 0
 
 let userTrys = 4
 
 let bonusTrys = 6
 
-let numberGamez = false
+let randomNumber = 0
+
+let quizAnswers = ['noah, italy, pasta, mushroom, caesar']
 
 function userPrompt() {
 
@@ -38,35 +38,6 @@ function userPrompt() {
     
 }
 
-function menuOpen() {
-
-    if (openUp == 0) {
-
-        var list = document.getElementsByClassName('menuList');
-
-        for(let i = 0; i < list.length; i++) {
-
-            list[i].style.visibility = "visible"
-
-        }
-
-        openUp += 1
-
-    } else {
-
-        var list = document.getElementsByClassName('menuList');
-
-        for(let i = 0; i < list.length; i++) {
-
-            list[i].style.visibility = "hidden"
-
-        }
-
-        openUp -=1
-
-    }
-
-}
 
 function quiz() {
 
@@ -104,7 +75,6 @@ function quiz() {
 
         userScore ++
 
-
     } else {
         
         alert('wrong');
@@ -118,7 +88,6 @@ function quiz() {
 
         userScore ++
 
-
     } else {
         
         alert('wrong');
@@ -126,13 +95,11 @@ function quiz() {
 
     let fiththAnswer = prompt('who was my favourite roman');
 
-
     if (fiththAnswer.toLowerCase() === 'juluis caesar' || fiththAnswer.toLowerCase() === 'caesar') {
 
         alert('correct');
 
         userScore ++
-
 
     } else {
         
@@ -141,6 +108,8 @@ function quiz() {
 
     console.log(userScore)
 
+    randomNumber = Math.floor((Math.random() * 10) + 1);
+
     numberGame()
 
     userTrys = 4
@@ -148,6 +117,8 @@ function quiz() {
 }
 
 function numberGame(){
+
+    console.log(randomNumber)
 
     if (userTrys == 0) {
 
@@ -164,7 +135,7 @@ function numberGame(){
 
     console.log(numberGuess)
 
-    if (numberGuess > 15 || numberGuess == 15) {
+    if (numberGuess > randomNumber) {
 
         alert('too high!');
 
@@ -172,7 +143,7 @@ function numberGame(){
 
         numberGame()
 
-    } else if (numberGuess < 13 || numberGuess == 13) {
+    } else if (numberGuess < randomNumber) {
         
         alert('too low!');
 
@@ -180,7 +151,7 @@ function numberGame(){
 
         numberGame()
 
-    } else if (numberGuess == 14) {
+    } else if (numberGuess == randomNumber) {
 
         userScore ++
 
@@ -192,16 +163,13 @@ function numberGame(){
 
     }
 
-
-
 }
 
 function bonusRound() {
 
-
     if (bonusTrys == 0) {
 
-        alert("no more trys remaining! your final score is " + userScore + ' well done')
+        alert("no more trys remaining! your final score is " + userScore + ' out of 7')
 
         console.log()
 
@@ -215,9 +183,9 @@ function bonusRound() {
 
     if (finalAnswer.toLowerCase() === chelseaPlayers[0] || finalAnswer.toLowerCase() === chelseaPlayers[1] || finalAnswer.toLowerCase() === chelseaPlayers[2]) {
 
-        alert('correct, your final score is ' + userScore);
-
         userScore ++
+
+        alert('correct, your final score is ' + userScore + ' out of 7');
 
         bonusTrys == 6
 
@@ -229,6 +197,5 @@ function bonusRound() {
 
         bonusRound()
     }
-
 
 }
