@@ -7,63 +7,81 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body id="body">
     <header>
         <div class="header-container">
-            <p>About Me</p>
-            <div class="empty"></div>
+            <p class="title-header">About Me</p>
         </div>
     </header>
     <main>
-        <h1 id="welcome-message">hello, welcome to my about me page</h1>
-        <p id="welcome-paragraph" class="welcome-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quibusdam veniam ratione est animi deserunt eos facilis et. Amet, et iste, nulla, consequatur ad magnam doloremque similique accusantium iusto perferendis ullam cumque sapiente voluptates nihil praesentium dignissimos aut. Incidunt, et ab fuga molestias est sapiente debitis eaque minus accusantium! Deserunt!</p>
+        <h1 id="welcome-message">Hello, welcome to my about me page</h1>
+        <p id="welcome-paragraph" class="welcome-paragraph">My name is Noah, the first country I went on holiday too was Italy. While I was there I ate lots of food like rissoto and pizza but my favourite is pasta. I really dont like mushrooms on pizza I think its just wrong. My favourite roman of all time is definatly Caesar.</p>
         <div class="quiz-container">
-            <button onclick="newQuiz()" class="quiz-button">whats this?</button>
+            <button onclick="newQuiz()" class="quiz-button">take the quiz!</button>
         </div>
         <div class="image-container">
             <div class="image-box">
-                <img src="https://placekitten.com/226/189" alt="small cat 1">
-                <p class="image-text">small cat number 1</p>
+                <div class="image-box-container">
+                <img class="football-image" src="/assets/zola.jpeg" alt="small cat 1">
+                </div>
+                <p class="image-text">zola</p>
             </div>
             <div class="image-box">
-                <img src="https://placekitten.com/226/188" alt="small cat 2">
-                <p class="image-text">small cat number 2</p>
+                <div class="image-box-container">
+                <img class="football-image" src="/assets/cfc.png" alt="small cat 2">
+                </div>
+                <p class="image-text">chelsea</p>
             </div>
             <div class="image-box">
-                <img src="https://placekitten.com/226/187" alt="small cat 3">
-                <p class="image-text">small cat number 3</p>
+                <div class="image-box-container">
+                <img class="football-image" src="assets/lamps.jpg" alt="small cat 3">
+                </div>
+                <p class="image-text">lampard</p>
             </div>
             <div class="image-box">
-                <img src="https://placekitten.com/226/188" alt="small cat 4">
-                <p class="image-text">small cat number 4</p>
+                <div class="image-box-container">
+                <img class="football-image" src="assets/terry.png" alt="small cat 4">
+                </div>
+                <p class="image-text">terry</p>
             </div>
             </div>
             <div class="list-homes">
+            <div class="lists-indi">
             <ol>top ten things
                 <li class="menuList">here</li>
                 <li class="menuList">is</li>
                 <li class="menuList">a</li>
                 <li class="menuList">fake</li>
                 <li class="menuList">menu</li>
-                <li class="menuList">and</li>
+            </ol>
+            <ol> that ive done
+                <li value="6" class="menuList">and</li>
                 <li class="menuList">some</li>
                 <li class="menuList">more</li>
                 <li class="menuList">stuff</li>
                 <li class="menuList">here</li>
             </ol>
-            <ul>work ex
+        </div>
+        <div class="lists-indi">
+            <ul>work experience
                 <li class="menuList">here</li>
                 <li class="menuList">is</li>
                 <li class="menuList">a</li>
                 <li class="menuList">fake</li>
                 <li class="menuList">menu</li>
+            </ul>
+            <ul>and goals
                 <li class="menuList">and</li>
                 <li class="menuList">some</li>
                 <li class="menuList">more</li>
                 <li class="menuList">stuff</li>
                 <li class="menuList">here</li>
             </ul>
+        </div>
         </div>
         </main>
     <footer>
