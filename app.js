@@ -8,7 +8,7 @@ let bonusTrys = 6
 
 let questions = [['what is my name?'],['where was my the first country i visited?'],['what is my favourite food?'],['what does not belong on pizza?'],['who is my favourite roman']]
 
-let answers = [['noah'],['italy'],['pasta'],['mushroom', 'pineapple'],['caesar', 'juluis caesar']]
+let answers = [['noah'],['italy'],['pasta'],['mushrooms', 'pineapple', 'mushroom'],['caesar', 'juluis caesar']]
 
 let responses = [['thats my name dont wear it out'],['la dolce vita'],['oodles of noodles'],['yuck, gross'],['great guy']]
 
