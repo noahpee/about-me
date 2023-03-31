@@ -12,19 +12,20 @@ let answers = [['noah'],['italy'],['pasta'],['mushroom', 'pineapple'],['caesar',
 
 let responses = [['thats my name dont wear it out'],['la dolce vita'],['oodles of noodles'],['yuck, gross'],['great guy']]
 
-let randomNumber = Math.floor((Math.random() * 10) + 1);
+let chelseaPlayers = ['zola', 'lampard', 'terry']
 
+let randomNumber = Math.floor((Math.random() * 10) + 1);
 
 
 function newQuiz() {
 
-    userScore == 0
+    userScore = 0
 
     for(let i = 0; i < questions.length; i++) {
 
-        let quiz = prompt(questions[i]);
+        let quiz = prompt(questions[i]).toLowerCase();
 
-        if (quiz.toLowerCase() === answers[i][0] || quiz.toLowerCase() === answers[i][1])  {
+        if (answers[i].includes(quiz))  {
     
             alert(responses[i])
     
@@ -46,8 +47,6 @@ function newQuiz() {
 
 function numberGame(){
 
-    console.log(randomNumber)
-
     if (userTrys == 0) {
 
         alert('no more trys remaining!')
@@ -60,8 +59,6 @@ function numberGame(){
     }
 
     let numberGuess = prompt('can you guess a random number? you have ' + userTrys + ' trys remaining');
-
-    console.log(numberGuess)
 
     if (numberGuess > randomNumber) {
 
@@ -93,23 +90,19 @@ function numberGame(){
 
 }
 
-
 function bonusRound() {
 
     if (bonusTrys == 0) {
 
         alert("no more trys remaining! your final score is " + userScore + ' out of 7')
 
-        console.log()
-
         return
     }
 
-    let chelseaPlayers = ['zola', 'lampard', 'terry']
 
-    let finalAnswer = prompt('for a bonus point can you name any of my favourite chelsea players? you have ' + bonusTrys + ' trys remaining');
+    let finalAnswer = prompt('for a bonus point can you name any of my favourite chelsea players? you have ' + bonusTrys + ' trys remaining').toLowerCase();
 
-    if (finalAnswer.toLowerCase() === chelseaPlayers[0] || finalAnswer.toLowerCase() === chelseaPlayers[1] || finalAnswer.toLowerCase() === chelseaPlayers[2]) {
+    if (chelseaPlayers.includes(finalAnswer)) {
 
         userScore ++
 
