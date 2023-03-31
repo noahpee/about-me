@@ -6,36 +6,43 @@ let userTrys = 4
 
 let bonusTrys = 6
 
-let quizzies = [{Q:'what is my name?', A:'noah'}, {Q:'where was my the first country i visited?', A:'italy'}, {Q:'what is my favourite food?', A:'pasta'}, {Q:'what does not belong on pizza?', A:'mushroom'}, {Q:'who is my favourite roman', A:'caesar'} ]
+let questions = [['what is my name?'],['where was my the first country i visited?'],['what is my favourite food?'],['what does not belong on pizza?'],['who is my favourite roman']]
+
+let answers = [['noah'],['italy'],['pasta'],['mushroom', 'pineapple'],['caesar', 'juluis caesar']]
+
+let responses = [['thats my name dont wear it out'],['la dolce vita'],['oodles of noodles'],['yuck, gross'],['great guy']]
 
 let randomNumber = Math.floor((Math.random() * 10) + 1);
+
+
 
 function newQuiz() {
 
     userScore == 0
 
-    for(let i = 0; i < quizzies.length; i++) {
+    for(let i = 0; i < questions.length; i++) {
 
-        let quizzQuiz = prompt(quizzies[i].Q);
+        let quiz = prompt(questions[i]);
 
-        if (quizzQuiz.toLowerCase() === quizzies[i].A) {
+        if (quiz.toLowerCase() === answers[i][0] || quiz.toLowerCase() === answers[i][1])  {
     
-            alert('correct');
+            alert(responses[i])
     
             userScore ++
     
         } else {
             
-            alert('wrong');
+            alert('wrong')
         }
 
     }
 
-    alert('your final score is ' + userScore + ' out of 5');
+    alert('your final score is ' + userScore + ' out of 5')
 
     numberGame()
 
 }
+
 
 function numberGame(){
 
@@ -85,6 +92,7 @@ function numberGame(){
     }
 
 }
+
 
 function bonusRound() {
 
