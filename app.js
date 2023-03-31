@@ -6,7 +6,7 @@ let userTrys = 4
 
 let bonusTrys = 6
 
-let quizzies = [{Q:'what is my name?', A:'noah'}, {Q:'where was my the first country i visited?', A:'italy'}, {Q:'what is my favourite food?', A:'pasta'}, {Q:'what does not belong on pizza?', A:'mushroom'}, {Q:'who is my favourite roman', A:'juluis caesar'} ]
+let quizzies = [{Q:'what is my name?', A:'noah'}, {Q:'where was my the first country i visited?', A:'italy'}, {Q:'what is my favourite food?', A:'pasta'}, {Q:'what does not belong on pizza?', A:'mushroom'}, {Q:'who is my favourite roman', A:'caesar'} ]
 
 let randomNumber = Math.floor((Math.random() * 10) + 1);
 
@@ -52,7 +52,7 @@ function numberGame(){
         return
     }
 
-    let numberGuess = prompt('can you guess my favourite number? you have ' + userTrys + ' remaining');
+    let numberGuess = prompt('can you guess a random number? you have ' + userTrys + ' trys remaining');
 
     console.log(numberGuess)
 
@@ -78,7 +78,7 @@ function numberGame(){
 
         console.log("your score is " + userScore + ' so far')
 
-        alert('great number') 
+        alert('justttt right!') 
 
         bonusRound()
 
@@ -99,7 +99,7 @@ function bonusRound() {
 
     let chelseaPlayers = ['zola', 'lampard', 'terry']
 
-    let finalAnswer = prompt('for a bonus point can you name any of my favourite chelsea players? you have ' + bonusTrys + ' remaining');
+    let finalAnswer = prompt('for a bonus point can you name any of my favourite chelsea players? you have ' + bonusTrys + ' trys remaining');
 
     if (finalAnswer.toLowerCase() === chelseaPlayers[0] || finalAnswer.toLowerCase() === chelseaPlayers[1] || finalAnswer.toLowerCase() === chelseaPlayers[2]) {
 
