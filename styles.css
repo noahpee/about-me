@@ -1,4 +1,15 @@
+/*
+main colour: #F6F1E9;
+accent colour: #FFD93D;
+light colour: #FF8400;
+dark colour: #4F200D;
+ 
+
+
+*/
+
 body {
+    background-color:#F6F1E9;
     font-size: 1rem;
     color: rgb(43, 43, 43);
     visibility: visible;
@@ -13,8 +24,9 @@ header {
     justify-content: space-evenly;
     width: 90%;
     margin: auto;
-    background-color: antiquewhite;
+    background-color:#FFD93D;
     height: 50px;
+    color:#FF8400;
 }
 
 .title-header {
@@ -33,7 +45,7 @@ h1{
     justify-content: space-between;
     width: 90%;
     margin: 0;
-    background-color: antiquewhite;
+    background-color:#FFD93D;
     height: 10%;
 }
 
@@ -42,8 +54,16 @@ h1{
     width: 50px;
 }
 
+.welcome-box{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 150px;
+}
+
 .welcome-paragraph {
     margin: 1% 5%;
+    width: 90%;
 }
 
 .quiz-container {
@@ -52,6 +72,10 @@ h1{
 }
 .quiz-button {
     margin: 0 auto;
+    background-color: #4F200D;
+    color: #FFD93D;
+    border-style: none;
+    border-radius: 5px;
 }
 
 .menu {
@@ -69,12 +93,13 @@ h1{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: #FF8400;
     margin: 2%;
     border-style: solid;
     border-radius: 5px;
     text-align: center;
     width: 100%;
+    border-color: #4F200D;
 }
 
 .football-image {
@@ -90,6 +115,7 @@ h1{
 .image-text {
     margin-bottom: 10%;
     font-size: 1.5rem;
+    color: #FFD93D;;
 }
 
 .list-homes {
